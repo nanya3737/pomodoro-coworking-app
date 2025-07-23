@@ -1,0 +1,20 @@
+{
+  "name": "pomodoro-coworking",
+  "version": "1.0.0",
+  "description": "Shared Pomodoro Timer for Coworking Spaces",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": ["pomodoro", "timer", "coworking", "websocket"],
+  "author": "claude-code",
+  "license": "MIT"
+}

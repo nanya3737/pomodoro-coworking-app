@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コワーキング ポモドーロタイマー</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-content">
+                <h1 class="app-title">🍅 コワーキング ポモドーロ</h1>
+                <p class="app-subtitle">みんなで集中、みんなで休憩</p>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="left-section">
+                <div class="join-card">
+                    <h2 class="card-title">セッションに参加</h2>
+                    <div class="join-form">
+                        <input type="text" id="usernameInput" class="name-input" placeholder="お名前を入力..." maxlength="20">
+                        <button id="joinBtn" class="join-btn">参加する</button>
+                    </div>
+                </div>
+
+                <div class="timer-card">
+                    <div class="timer-header">
+                        <div id="phaseText" class="phase-badge">作業時間</div>
+                        <div id="phaseDescription" class="phase-subtitle">集中して作業しましょう</div>
+                    </div>
+                    
+                    <div class="timer-display-container">
+                        <div class="circular-progress">
+                            <svg class="progress-ring" width="280" height="280">
+                                <circle class="progress-ring-background" cx="140" cy="140" r="120"></circle>
+                                <circle id="progressRing" class="progress-ring-foreground" cx="140" cy="140" r="120"></circle>
+                            </svg>
+                            <div class="timer-content">
+                                <div id="timeDisplay" class="time-display">50:00</div>
+                                <div class="timer-label">残り時間</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timer-controls">
+                        <button id="startBtn" class="control-btn primary-btn">
+                            <span class="btn-icon">▶</span>
+                            開始
+                        </button>
+                        <button id="stopBtn" class="control-btn secondary-btn">
+                            <span class="btn-icon">⏸</span>
+                            停止
+                        </button>
+                        <button id="resetBtn" class="control-btn tertiary-btn">
+                            <span class="btn-icon">↻</span>
+                            リセット
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <div class="participants-card">
+                    <div class="participants-header">
+                        <h3 class="participants-title">参加者</h3>
+                        <span id="participantCount" class="participant-count">0</span>
+                    </div>
+                    <div id="participantsList" class="participants-grid">
+                        <!-- 参加者リストがここに表示されます -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="notification" class="notification-toast"></div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/client.js"></script>
+</body>
+</html>
