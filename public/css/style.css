@@ -401,6 +401,30 @@ body {
   background: var(--airbnb-teal);
 }
 
+.participant-leave-btn {
+  margin-left: 12px;
+  padding: 8px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--airbnb-red);
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  cursor: pointer;
+  transition: var(--transition);
+  outline: none;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.participant-leave-btn:hover {
+  background: #d13c3f;
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-1px) scale(1.04);
+}
+
 .notification-toast {
   position: fixed;
   top: 24px;
@@ -431,6 +455,8 @@ body {
 .notification-toast.break-phase {
   background: linear-gradient(135deg, var(--airbnb-teal), #00c4b6);
 }
+
+/* 設定フォーム用スタイル削除済み */
 
 @media (max-width: 768px) {
   .app-container {

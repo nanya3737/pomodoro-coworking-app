@@ -1,20 +1,16 @@
 {
   "name": "pomodoro-coworking",
   "version": "1.0.0",
-  "description": "Shared Pomodoro Timer for Coworking Spaces",
-  "main": "src/server.js",
+  "description": "Shared Pomodoro Timer for Coworking Spaces - Vercel Deployment",
+  "type": "module",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js"
+    "start": "node src/server.js"
   },
-  "dependencies": {
-    "express": "^4.18.2",
-    "socket.io": "^4.7.2"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "vercel": "^32.0.0"
   },
-  "keywords": ["pomodoro", "timer", "coworking", "websocket"],
+  "keywords": ["pomodoro", "timer", "coworking", "vercel", "serverless"],
   "author": "claude-code",
   "license": "MIT"
 }

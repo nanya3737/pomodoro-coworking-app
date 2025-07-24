@@ -13,8 +13,8 @@
     <div class="app-container">
         <header class="app-header">
             <div class="header-content">
-                <h1 class="app-title">🍅 コワーキング ポモドーロ</h1>
-                <p class="app-subtitle">みんなで集中、みんなで休憩</p>
+                <h1 class="app-title">チームポモドーロ</h1>
+                <p class="app-subtitle"></p>
             </div>
         </header>
 
@@ -43,6 +43,8 @@
                             <div class="timer-content">
                                 <div id="timeDisplay" class="time-display">50:00</div>
                                 <div class="timer-label">残り時間</div>
+                                <div id="currentTime" class="timer-meta"></div>
+                                <div id="endTime" class="timer-meta"></div>
                             </div>
                         </div>
                     </div>
@@ -80,7 +82,6 @@
         <div id="notification" class="notification-toast"></div>
     </div>
     
-    <script src="/socket.io/socket.io.js"></script>
     <script src="/js/client.js"></script>
 </body>
 </html>
