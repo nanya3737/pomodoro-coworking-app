@@ -1,17 +1,16 @@
 {
   "name": "pomodoro-coworking",
   "version": "1.0.0",
-  "description": "Shared Pomodoro Timer for Coworking Spaces - Vercel Deployment",
+  "description": "Shared Pomodoro Timer for Coworking Spaces",
+  "type": "module",
+  "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js"
   },
   "dependencies": {
     "express": "^4.18.2"
   },
-  "devDependencies": {
-    "vercel": "^32.0.0"
-  },
-  "keywords": ["pomodoro", "timer", "coworking", "vercel", "serverless"],
+  "keywords": ["pomodoro", "timer", "coworking", "express"],
   "author": "claude-code",
   "license": "MIT"
 }
